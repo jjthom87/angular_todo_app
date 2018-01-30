@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port ${process.env.PORT || 4200}",
+    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postInstall": "ng build --aot -prod"
+    "postInstall": "ng build --aot -prod && ng serve --port ${PORT}"
   },
   "dependencies": {
     "@angular/animations": "^5.2.0",
