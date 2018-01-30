@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port ${PORT}",
+    "start": "nodemon server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,6 +12,7 @@
     "postInstall": "ng build --aot -prod && ng serve --port ${PORT}"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "@angular/animations": "^5.2.0",
     "@angular/cli": "1.6.5",
     "@angular/common": "^5.2.0",
@@ -47,4 +48,3 @@
     "tslint": "~5.9.1"
   }
 }
-
