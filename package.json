@@ -11,7 +11,6 @@
     "e2e": "ng e2e",
     "postInstall": "ng build --aot -prod"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/cli": "1.6.5",
