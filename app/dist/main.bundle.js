@@ -37,8 +37,8 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
-            template: "\n    <div class=\"header\"><h2>Welcome to {{title}}</h2></div>\n    <ul>\n      <li><h2><a routerLink=\"/\">Home</a></h2></li>\n      <li><h2><a routerLink=\"/todo\">Todo</a></h2></li>\n      <li><h2><a routerLink=\"/course\">Course</a></h2></li>\n      <li><h2><a routerLink=\"/courses\">Courses</a></h2></li>\n    </ul>\n    <router-outlet></router-outlet>\n  ",
-            styles: ["\n  .header { text-align:center; margin:15px 0px; }\n  ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; }\n  li { float: left; }\n  li a { display: block; color: white; text-align: center; padding: 15px; text-decoration: none; }\n  li a:hover { background-color: #111; }\n  "]
+            template: "\n    <h1>GAURANG IS GAY</h1>\n    <h1>WHATEVER</h1>\n    <div class=\"header\"><h2>Welcome to {{title}}</h2></div>\n    <ul>\n      <li><h2><a routerLink=\"/\">Home</a></h2></li>\n      <li><h2><a routerLink=\"/todo\">Todo</a></h2></li>\n      <li><h2><a routerLink=\"/course\">Course</a></h2></li>\n      <li><h2><a routerLink=\"/courses\">Courses</a></h2></li>\n    </ul>\n    <router-outlet></router-outlet>\n  ",
+            styles: ["\n  .header { text-align:center; margin:15px 0px; }\n  ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; }\n  li { float: left; }\n  li a { display: block; color: white; text-align: center; padding: 15px; text-decoration: none; }\n  li a:hover { background-color: #111; }\n  h1 { text-align:center; font-size: 100px }\n  "]
         })
     ], AppComponent);
     return AppComponent;
@@ -194,7 +194,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authors/authors.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\n<h1 [textContent]=\"title\"></h1>\n<ul class=\"well\">\n\t<li *ngFor=\"let author of authors\">{{author}}</li>\n\t<img style=\"height: 100px; width: auto;\" src={{image_url}}/>\n\t<img style=\"height: 100px; width: auto;\" [src]=\"image_url\"/>\n</ul>\n<button \n\t(click)=\"onSave($event)\"\n\tclass=\"btn btn-info\" \n\t[class.active]=\"isActive\"\n\t[style.backgroundColor]=\"isActive ? 'green' : 'purple'\"\n>\n\tHey\n</button>\n<input (keyup)=\"onKeyUp($event)\"/>\n<p>{{keyUpText}}</p>\n<table class=\"table\">\n\t<tr>\n\t\t<td [attr.colspan]=\"colSpan\"></td>\n\t</tr>\n</table>\n<input (keyup.enter)=\"onKeyUpEnter($event)\"/>\n<p>{{keyUpEnterText ? keyUpEnterText : N/A}}</p>\n<input #whatever (keyup.enter)=\"onEnterThis(whatever.value)\"/>\n<p>{{enterThisText ? enterThisText : N/A}}</p>\n<a routerLink=\"/todo\" routerLinkActive=\"active\">To todo</a>\n"
+module.exports = "<h1>{{title}}</h1>\n<h1 [textContent]=\"title\"></h1>\n<ul class=\"well\">\n\t<li *ngFor=\"let author of authors\">{{author}}</li>\n\t<img style=\"height: 100px; width: auto;\" src={{image_url}}/>\n\t<img style=\"height: 100px; width: auto;\" [src]=\"image_url\"/>\n</ul>\n<button \n\t(click)=\"onSave($event)\"\n\tclass=\"btn btn-info\" \n\t[class.active]=\"isActive\"\n\t[style.backgroundColor]=\"isActive ? 'green' : 'purple'\"\n>\n\tHey\n</button>\n<input (keyup)=\"onKeyUp($event)\"/>\n<p>{{keyUpText}}</p>\n<table class=\"table\">\n\t<tr>\n\t\t<td [attr.colspan]=\"colSpan\"></td>\n\t</tr>\n</table>\n<input (keyup.enter)=\"onKeyUpEnter($event)\"/>\n<p>{{keyUpEnterText ? keyUpEnterText : 'N/A'}}</p>\n<input #whatever (keyup.enter)=\"onEnterThis(whatever.value)\"/>\n<p>{{enterThisText ? enterThisText : 'N/A'}}</p>\n<a routerLink=\"/todo\" routerLinkActive=\"active\">To todo</a>\n"
 
 /***/ }),
 
