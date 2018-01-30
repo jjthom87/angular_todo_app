@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>GAURANG IS GAY</h1>
+    <h1>WHATEVER</h1>
     <div class="header"><h2>Welcome to {{title}}</h2></div>
     <ul>
       <li><h2><a routerLink="/">Home</a></h2></li>

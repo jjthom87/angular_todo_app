@@ -9,12 +9,12 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng build && ng serve",
+    "start": "node server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postInstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod"
   },
   "dependencies": {
     "express": "^4.14.0",
