@@ -8,10 +8,10 @@ var app = express();
 // Sets an initial port. We'll use this later in our listener
 var PORT = process.env.PORT || 8000;
 
-app.use(express.static('./dist'));
+app.use(express.static('./app/dist'));
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, 'dist/index.html'))
+	res.sendFile(path.join(__dirname, './app/dist/index.html'))
 });
 
 // Starting our express server
