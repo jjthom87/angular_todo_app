@@ -2,14 +2,15 @@
   "name": "hello-world",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postInstall": "ng build --aot -prod && ng serve --port ${PORT}"
+    "postInstall": "ng build --aot -prod"
   },
   "dependencies": {
     "express": "^4.14.0",
