@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+    <h1>GAURANG IS GAY</h1>
     <div class="header"><h2>Welcome to {{title}}</h2></div>
     <ul>
       <li><h2><a routerLink="/">Home</a></h2></li>
@@ -18,6 +19,7 @@ import { Component } from '@angular/core';
   li { float: left; }
   li a { display: block; color: white; text-align: center; padding: 15px; text-decoration: none; }
   li a:hover { background-color: #111; }
+  h1 { text-align:center; font-size: 100px }
   `]
 })
 export class AppComponent {
