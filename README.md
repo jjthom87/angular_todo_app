@@ -32,3 +32,5 @@ Create Component: ng g c (component name)
 Create Service: ng g s (service name)
 
 Angular 4 routing: https://github.com/rutvikrpatel/Angular-4-Routing-Example/blob/master/src/app/app.module.ts
+
+https://floating-beach-37704.herokuapp.com/
