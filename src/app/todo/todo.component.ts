@@ -24,7 +24,7 @@ export class TodoComponent implements OnInit {
 
     //this.todos.push({id: this.todos.length + 1, message:f.value.todo})
     if(f.value.todo !== ""){
-      this.http.post(`https://hidden-coast-87866.herokuapp.com/api/create-todo`, {
+      this.http.post(`/api/create-todo`, {
         message: f.value.todo
       }).subscribe(
         res => {
@@ -44,7 +44,7 @@ export class TodoComponent implements OnInit {
   	// this.todos.splice(this.todos.map((todo) => {
   	// 	return todo.id
   	// }).indexOf(todoId), 1);
-    this.http.delete(`https://hidden-coast-87866.herokuapp.com/api/delete-todo/${todoId}`).subscribe(res => this.repopulateTodos(res))
+    this.http.delete(`/api/delete-todo/${todoId}`).subscribe(res => this.repopulateTodos(res))
   }
 
   onStrikeThrough($event){
@@ -66,7 +66,7 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(api_url)
-    this.http.get(`https://hidden-coast-87866.herokuapp.com/api/todos`).subscribe((res:Response) => this.populateTodos(res))
+    this.http.get(`/api/todos`).subscribe((res:Response) => this.populateTodos(res))
   }
 
 }

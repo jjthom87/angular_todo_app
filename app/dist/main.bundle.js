@@ -37,7 +37,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
-            template: "\n    <h1>GAURANG IS GAY</h1>\n    <h1>WHATEVER</h1>\n    <div class=\"header\"><h2>Welcome to {{title}}</h2></div>\n    <ul>\n      <li><h2><a routerLink=\"/\">Home</a></h2></li>\n      <li><h2><a routerLink=\"/todo\">Todo</a></h2></li>\n      <li><h2><a routerLink=\"/course\">Course</a></h2></li>\n      <li><h2><a routerLink=\"/courses\">Courses</a></h2></li>\n    </ul>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1>GAURANG IS GAY</h1>\n    <div class=\"header\"><h2>Welcome to {{title}}</h2></div>\n    <ul>\n      <li><h2><a routerLink=\"/\">Home</a></h2></li>\n      <li><h2><a routerLink=\"/todo\">Todo</a></h2></li>\n      <li><h2><a routerLink=\"/course\">Course</a></h2></li>\n      <li><h2><a routerLink=\"/courses\">Courses</a></h2></li>\n    </ul>\n    <router-outlet></router-outlet>\n  ",
             styles: ["\n  .header { text-align:center; margin:15px 0px; }\n  ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; }\n  li { float: left; }\n  li a { display: block; color: white; text-align: center; padding: 15px; text-decoration: none; }\n  li a:hover { background-color: #111; }\n  h1 { text-align:center; font-size: 100px }\n  "]
         })
     ], AppComponent);
@@ -444,7 +444,7 @@ var TodoComponent = /** @class */ (function () {
         $event.preventDefault();
         //this.todos.push({id: this.todos.length + 1, message:f.value.todo})
         if (f.value.todo !== "") {
-            this.http.post("https://hidden-coast-87866.herokuapp.com/api/create-todo", {
+            this.http.post("/api/create-todo", {
                 message: f.value.todo
             }).subscribe(function (res) {
                 _this.repopulateTodos(res);
@@ -462,7 +462,7 @@ var TodoComponent = /** @class */ (function () {
         // this.todos.splice(this.todos.map((todo) => {
         // 	return todo.id
         // }).indexOf(todoId), 1);
-        this.http.delete("https://hidden-coast-87866.herokuapp.com/api/delete-todo/" + todoId).subscribe(function (res) { return _this.repopulateTodos(res); });
+        this.http.delete("/api/delete-todo/" + todoId).subscribe(function (res) { return _this.repopulateTodos(res); });
     };
     TodoComponent.prototype.onStrikeThrough = function ($event) {
         $event.target.style.textDecoration = 'line-through';
@@ -483,7 +483,7 @@ var TodoComponent = /** @class */ (function () {
     TodoComponent.prototype.ngOnInit = function () {
         var _this = this;
         console.log(__WEBPACK_IMPORTED_MODULE_2__api_url__["a" /* default */]);
-        this.http.get("https://hidden-coast-87866.herokuapp.com/api/todos").subscribe(function (res) { return _this.populateTodos(res); });
+        this.http.get("/api/todos").subscribe(function (res) { return _this.populateTodos(res); });
     };
     TodoComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
