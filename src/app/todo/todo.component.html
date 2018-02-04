@@ -1,5 +1,5 @@
 <form #f="ngForm" (submit)="onSubmitTodo($event, f)">
-	<label>ToDo Input</label><br>
+	<label>Why I Love You All the time again</label><br>
 	<input 
 		ngModel
 		id="todo"
@@ -12,7 +12,12 @@
 </form>
 <ul class="well">
 	<li *ngFor="let todo of todos; let i = index">
-		<span (click)="onStrikeThrough($event)">{{i + 1}}: {{todo.message}}</span>
+		<span 
+			(click)="onStrikeThrough($event)"
+			[ngClass]="todo.isCompleted ? 'lineIt' : 'noLineIt'"
+		>
+			{{i + 1}}: {{todo.message}}</span>
+		<input type="checkbox" [checked]="todo.isCompleted" (change)="onUpdateTodo(todo.id)"/>
 		<button class="btn btn-danger" (click)="onDelete(todo.id)">x</button>
 	</li>
 </ul>

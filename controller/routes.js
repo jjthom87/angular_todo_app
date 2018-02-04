@@ -29,6 +29,25 @@ router.post('/api/create-todo', (req,res) => {
 	})
 })
 
+router.put('/api/update-todo', (req,res) => {
+	models.Guestbook.findOne({where:{id: req.body.id}}).then((todo) => {
+		models.Guestbook.update({isCompleted: !todo.isCompleted}, {where: {id: req.body.id}}).then((updated) => {
+			models.Guestbook.findAll({order: [
+		            ['id', 'ASC']
+		    	]}).then(function(messages){
+					res.json(messages);
+			});	
+		})
+	});
+	// models.Guestbook.destroy({where: {id: req.params.id}}).then((todos) => {
+	// 	models.Guestbook.findAll({order: [
+	//             ['id', 'ASC']
+	//     	]}).then(function(messages){
+	// 			res.json(messages);
+	// 	});
+	// })
+})
+
 router.delete('/api/delete-todo/:id', (req,res) => {
 	models.Guestbook.destroy({where: {id: req.params.id}}).then((todos) => {
 		models.Guestbook.findAll({order: [

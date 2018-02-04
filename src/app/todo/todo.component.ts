@@ -64,6 +64,14 @@ export class TodoComponent implements OnInit {
     })
   }
 
+  onUpdateTodo(id){
+    this.http.put(`/api/update-todo`, {
+      id: id
+    }).subscribe((res:Response) => 
+      this.repopulateTodos(res)
+    )
+  }
+
   ngOnInit(): void {
     console.log(api_url)
     this.http.get(`/api/todos`).subscribe((res:Response) => this.populateTodos(res))
